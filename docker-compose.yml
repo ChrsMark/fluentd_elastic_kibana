@@ -9,6 +9,8 @@ services:
     ports:
       - "24224:24224"
       - "24224:24224/udp"
+    environment:
+      - "NATS_SERVER=${NATS_SERVER}"
     logging:
         driver: "json-file"
         options:
