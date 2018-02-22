@@ -1,5 +1,21 @@
 network.host: 0.0.0.0
 xpack.security.enabled: false
 xpack.monitoring.enabled: false
-xpack.watcher.enabled: false
+xpack.watcher.enabled: true
 xpack.graph.enabled: false
+
+xpack.notification.slack:
+  account:
+    monitoring:
+      url: https://hooks.slack.com/services/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
+      message_defaults:
+        from: x-pack
+        to: notifications
+        icon: http://example.com/images/watcher-icon.jpg
+        attachment:
+          fallback: "X-Pack Notification"
+          color: "#36a64f"
+          title: "X-Pack Notification"
+          title_link: "https://www.elastic.co/guide/en/x-pack/current/index.html"
+          text: "Agent Watcher Triggered"
+          mrkdwn_in: "pretext, text"
